@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Translation App</h1>
-    <form method="post" action="/translate">
+    <form method="post">
         <label for="text">Text:</label>
         <input type="text" id="text" name="text"><br><br>
         <label for="src_lang">Source Language:</label>
@@ -23,9 +23,5 @@
         </select><br><br>
         <input type="submit" value="Translate">
     </form>
-    {% if translation %}
-        <h2>Translation:</h2>
-        <p>{{ translation }}</p>
-    {% endif %}
 </body>
 </html>
