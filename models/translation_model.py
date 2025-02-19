@@ -1,9 +1,10 @@
-from transformers import T5ForConditionalGeneration, T5Tokenizer
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 class TranslationModel:
     def __init__(self):
-        self.model = T5ForConditionalGeneration.from_pretrained("t5-base")
-        self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
+        self.tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
+        self.model = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
 
     def translate(self, text, src_lang, tgt_lang):
         # Preprocess input text
