@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Translation Result</h1>
-    <p>Translated text: {{ translation }}</p>
+    <p>Translated text: {{ session['translation'] }}</p>
+    <a href="{{ url_for('index') }}">Back to Translation Page</a>
 </body>
 </html>
+
